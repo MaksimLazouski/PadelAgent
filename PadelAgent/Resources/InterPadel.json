@@ -1,0 +1,62 @@
+{
+  "clubId": "057c5f40-f54b-4e4d-977c-1f9547a25076",
+  "name": "Interpadel Warszawa",
+  "sportId": "PADEL",
+  "courts": [
+    {
+      "courtId": "6adbec60-7e35-4e8e-a9f4-b49810597547",
+      "name": "FLORA DEVELOPMENT kort 1",
+      "type": "double"
+    },
+    {
+      "courtId": "fe346b27-20d2-4a06-b8cc-ea1b6807c033",
+      "name": "PORTICO kort 2",
+      "type": "double"
+    },
+    {
+      "courtId": "659f26e7-1409-40e5-b19d-f0cc05709223",
+      "name": "kort 3",
+      "type": "double"
+    },
+    {
+      "courtId": "16956c5f-c8ac-409e-b461-14a13c4fe226",
+      "name": "kort 4",
+      "type": "double"
+    },
+    {
+      "courtId": "57dd9762-57ac-4746-8c0f-1ec7306cb1cb",
+      "name": "kort 5",
+      "type": "double"
+    },
+    {
+      "courtId": "81863e50-95cd-4781-82c0-f074047ecd2f",
+      "name": "LILOU kort 6",
+      "type": "double"
+    },
+    {
+      "courtId": "d7e15103-a57e-462a-9dbd-4c71c4e3f79c",
+      "name": "TRUE kort 7",
+      "type": "double"
+    },
+    {
+      "courtId": "8fd738e8-341b-43d2-b5cb-e923f8acc60c",
+      "name": "Recman kort 8",
+      "type": "double"
+    },
+    {
+      "courtId": "846e12b4-8e94-4d3d-8273-5a00b0dc0eec",
+      "name": "kort 9",
+      "type": "double"
+    },
+    {
+      "courtId": "648a9a72-cc0e-4061-8f45-8fd42fe70338",
+      "name": "kort 10 Singiel CUPRA Warszawa Centrum",
+      "type": "single"
+    },
+    {
+      "courtId": "dfc644f3-88ea-439f-9e2b-cbef817f59f8",
+      "name": "kort 11 Singel",
+      "type": "single"
+    }
+  ]
+}
