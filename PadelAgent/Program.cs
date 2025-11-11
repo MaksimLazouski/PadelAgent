@@ -3,7 +3,7 @@ using PadelAgent.Engine;
 using PadelAgent.Engine.Clients;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Configuration.AddEnvironmentVariables();
 var configuration = builder.Configuration;
 
 builder.Services.AddPlaytomicClient(configuration);
