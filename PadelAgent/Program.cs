@@ -10,6 +10,7 @@ builder.Services.AddPlaytomicClient(configuration);
 builder.Services.AddServices();
 builder.Services.Configure<ClubsSettings>(configuration.GetSection(nameof(ClubsSettings)));
 builder.Services.Configure<OpenAISettings>(configuration.GetSection(nameof(OpenAISettings)));
+builder.Services.Configure<CalendarSettings>(configuration.GetSection(nameof(CalendarSettings)));
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true)
     .AddControllers(options =>

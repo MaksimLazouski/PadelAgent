@@ -14,6 +14,8 @@ public static class DependencyInjection
         services.AddSingleton<IClubMetadataService>(
             _ => ClubMetadataService.FromJsonFile("Resources/InterPadel.json"));
         services.AddSingleton<IPlaytomicAvailabilityService, PlaytomicAvailabilityService>();
+        services.AddSingleton<ICalendarService, CalendarService>();
+        services.AddHttpClient("CalendarClient");
         services.AddSingleton<IAgentToolsProvider, AgentToolsProvider>();
         services.AddSingleton<IAgentFactory, AgentFactory>();
     }
