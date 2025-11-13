@@ -17,6 +17,7 @@ namespace PadelAgent.Controllers
                     cancellationToken);
 
             var response = new SearchCourtsResponse();
+            var daysCourts = new List<DayCourtsDto>();
             var byDate = playtomicSlots
                 .GroupBy(s => s.Start.Date)
                 .OrderBy(g => g.Key);
@@ -70,7 +71,10 @@ namespace PadelAgent.Controllers
                 }
 
                 dayCourts.Courts = courts;
+                daysCourts.Add(dayCourts);
             }
+
+            response.Dates = daysCourts;
 
             return Ok(response);
         }
