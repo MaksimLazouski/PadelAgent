@@ -4,6 +4,7 @@ public class PlaytomicSlot
 {
     public string ClubId { get; init; }
     public string CourtId { get; init; }
+    public string CourtName { get; set; }
     public CourtType Type { get; init; }
     public DateTime Start { get; init; }
     public DateTime End { get; init; }

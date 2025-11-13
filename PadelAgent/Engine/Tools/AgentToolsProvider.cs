@@ -41,7 +41,7 @@ public class AgentToolsProvider(IPlaytomicAvailabilityService playtomicAvailabil
         "Each item may include its own timeFrom/timeTo window (both optional).\n" +
         "Returns a ready-to-send formatted text summary."
     )]
-    public async Task<string> SearchPlaytomicAsync(
+    public async Task<List<PlaytomicSlot>> SearchPlaytomicAsync(
         [Description("Explicit list of dates (yyyy-MM-dd) with optional per-date windows.")]
         List<DateWindowParam> dates,
         [Description("Desired slot duration in minutes (optional). If null, return all durations.")]
@@ -56,14 +56,12 @@ public class AgentToolsProvider(IPlaytomicAvailabilityService playtomicAvailabil
             courtTypeValue = Enum.Parse<CourtType>(courtType, ignoreCase: true);
         var dayWindows = BuildDayWindows(dates);
 
-        var slots = await playtomicAvailabilityService.GetSlotsAsync(clubId: clubMetadata.ClubId,
+        return await playtomicAvailabilityService.GetSlotsAsync(clubId: clubMetadata.ClubId,
             sportId: clubMetadata.SportId,
             dayWindows: dayWindows,
             durationMinutes: durationMinutes,
             courtType: courtTypeValue,
             ct: ct);
-
-        return FormatSlots(slots);
     }
 
     public string FormatSlots(List<PlaytomicSlot> slots)

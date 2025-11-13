@@ -50,7 +50,7 @@ public class PlaytomicAvailabilityService(IPlaytomicClient playtomicClient,
                         if (availableCourt.Slots is null || availableCourt.Slots.Count == 0)
                             continue;
                         var type = clubMetadataService.GetCourtType(clubId, availableCourt.CourtId);
-
+                        var courtName = clubMetadataService.GetCourtName(clubId, availableCourt.CourtId);
                         foreach (var availableSlot in availableCourt.Slots)
                         {
                             if (durationMinutes.HasValue && availableSlot.DurationMinutes != durationMinutes.Value)
@@ -69,6 +69,7 @@ public class PlaytomicAvailabilityService(IPlaytomicClient playtomicClient,
                             {
                                 ClubId = clubId,
                                 CourtId = availableCourt.CourtId,
+                                CourtName = courtName,
                                 DurationMinutes = availableSlot.DurationMinutes,
                                 Start = start,
                                 End = start.AddMinutes(availableSlot.DurationMinutes),
